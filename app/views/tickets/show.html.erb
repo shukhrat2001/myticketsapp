@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h1>Ticket Details</h1>
+  <table class="table table-bordered">
+    <tr>
+      <th>Title</th>
+      <td><%= @ticket.title %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @ticket.description %></td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td><%= @ticket.status %></td>
+    </tr>
+  </table>
+  <%= link_to "Edit", edit_ticket_path(@ticket), class: "btn btn-warning mt-3" %>
+  <%= link_to "Back", tickets_path, class: "btn btn-primary mt-3" %>
+</div>

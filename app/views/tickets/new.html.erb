@@ -1,4 +1,20 @@
 <div class="container mt-5">
+
+<!--#### why it is not producing????###-->
+  <% if @ticket.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% @ticket.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_with model: @ticket do |form| %>
+    <!-- form inputs -->
+  <% end %>
+
   <h1>New Ticket</h1>
   <%= form_with model: @ticket, local: true do |form| %>
     <div class="form-group">
@@ -13,6 +29,6 @@
       <%= form.label :status %>
       <%= form.text_field :status, class: "form-control" %>
     </div>
-    <%= form.submit "Create Ticket", class: "btn btn-primary" %>
+    <%= form.submit "Submit", class: "btn btn-success btn-outline btn-lg" %>
   <% end %>
 </div>

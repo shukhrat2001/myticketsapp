@@ -1,4 +1,5 @@
 <div class="container mt-5">
+    <%= link_to "Create Ticket", new_ticket_path, class: "btn btn-success btn-outline btn-lg float-right" %>
   <h1>Tickets</h1>
   <table class="table table-bordered">
     <thead>
@@ -16,14 +17,13 @@
           <td><%= ticket.description %></td>
           <td><%= ticket.status %></td>
           <td>
-            <%= link_to "Show", ticket, class: "btn btn-primary btn-sm" %>
-            <%= link_to "Edit", edit_ticket_path(ticket), class: "btn btn-warning btn-sm" %>
-            <%= link_to 'Delete', ticket_path(ticket), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+            <%= link_to "Show", ticket, class: "btn btn-primary btn-sm float-left" %>
+            <%= link_to "Edit", edit_ticket_path(ticket), class: "btn btn-warning btn-sm float-left" %>
+            <%= link_to 'Delete', ticket_path(ticket), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm float-right" %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <%= link_to "New Ticket", new_ticket_path, class: "btn btn-primary mt-3" %>
 </div>

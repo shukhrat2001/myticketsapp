@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "ticketsapp",
+  "builds": [
+    {
+      "src": "config/puma.rb",
+      "use": "@vercel/ruby-builder"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "config/puma.rb" }
+  ]
+}
